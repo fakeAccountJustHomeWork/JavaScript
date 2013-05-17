@@ -1,0 +1,12 @@
+﻿html, body, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: green;
+}
+
+.hidden {
+    display: none;
+}

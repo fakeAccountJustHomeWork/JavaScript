@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script src="VehicleModel.js"></script>
+    <script>
+        var wheelArray = [
+                new propulsionUnitsNS.Wheel(10),
+                new propulsionUnitsNS.Wheel(10),
+                new propulsionUnitsNS.Wheel(10),
+                new propulsionUnitsNS.Wheel(10)
+            ],
+
+            car = new vehiclesNS.LandVehicle(wheelArray),
+
+            plane = new vehiclesNS.AirVehicle(5000),
+
+            ship = new vehiclesNS.WaterVehicle([new propulsionUnitsNS.Propeller(5)]),
+
+            amphibious = new vehiclesNS.AmphibiousVehicle(
+                [new propulsionUnitsNS.Wheel(10),
+                new propulsionUnitsNS.Wheel(10),
+                new propulsionUnitsNS.Wheel(10),
+                new propulsionUnitsNS.Wheel(10)],
+            [new propulsionUnitsNS.Propeller(5)]);
+
+        console.log("AirVehicle inherits Vehicle: " + (plane instanceof vehiclesNS.Vehicle));
+        console.log("Plane speed before afterburner: " + plane.speed);
+        plane.setAfterBurnerMode(enumsNS.afterBurnerEnum.ON);
+        console.log("Plane speed after afterburner: " + plane.speed);
+
+        console.log(" ");
+        console.log("LandVehicle inherits Vehicle: " + (car instanceof vehiclesNS.Vehicle));
+        console.log("Car speed: " + car.speed);
+
+        console.log(" ");
+        console.log("WaterVehicle inherits Vehicle: " + (ship instanceof vehiclesNS.Vehicle));
+        console.log("Ship speed(before direction change): " + ship.speed);
+        ship.setDirection(enumsNS.spinDirectionEnum.CounterClockwise);
+        console.log("Ship speed(after direction change): " + ship.speed);
+
+        console.log(" ");
+        console.log("AmphibiousVehicle inherits Vehicle: " + (amphibious instanceof vehiclesNS.Vehicle));
+        console.log("Amphibious speed (land mode): " + amphibious.speed);
+        amphibious.setMode(enumsNS.amphibiousModeEnum.waterMode);
+        console.log("Amphibious speed (marine mode): " + amphibious.speed);
+
+    </script>
+</body>
+</html>

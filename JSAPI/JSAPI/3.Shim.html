@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Shim</title>
+</head>
+<body>
+	<script src="3.json2.js"></script>
+	<script src="3.Shim.js"></script>
+	<script>
+		console.log("Before new localStorage set: " + localStorage.getItem("key"));
+		localStorage.setItem("key", "value");
+		console.log("After localStorage set: " + localStorage.getItem("key"));
+
+		sessionStorage.setItem("sessionKey", "sessionValue");
+		console.log("Session: " + sessionStorage.getItem("sessionKey"));
+	</script>
+</body>
+</html>

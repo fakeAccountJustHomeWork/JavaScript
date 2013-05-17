@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <input id="addPesho" type="button" name="AddNode" value="AddPesho " />
+    <input id="addGosho" type="button" name="AddNode" value="AddGosho " />
+
+    <div id="tree"></div>
+    <script src="4.TreeViewModule.js"></script>
+    <script>
+        var addPesho = document.getElementById("addPesho"),
+            addGosho = document.getElementById("addGosho"),
+            treeView = control.treeView("#tree"),
+            treeNode = treeView.addNode();
+
+        addPesho.addEventListener("click", function () {
+            treeView.addNode().addContent("Pesho");
+        });
+
+        addGosho.addEventListener("click", function () {
+            treeView.addNode().addContent("Gosho");
+        })
+
+        treeNode.addNode().addContent("Telerik Academy");
+        treeNode.addNode().addContent("Telerik Academy");
+        treeNode.addNode().addContent("Telerik Academy");
+
+        var newNode = treeNode.addNode();
+        newNode.addNode().addContent("Telerik Corp.");
+        newNode.addNode().addContent("Telerik Corp.");
+        newNode.addNode().addContent("Telerik Corp.");
+        newNode.addNode().addContent("Telerik Corp.");
+
+    </script>
+</body>
+</html>

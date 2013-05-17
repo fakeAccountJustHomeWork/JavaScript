@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="TODOList.css" rel="stylesheet" />
+</head>
+<body>
+    <form action="/" method="post">
+        <input id="inputText" type="text" onkeypress="return onKeyEnterPressed(event)" name="inputText" placeholder="Enter a todo note!" />
+        <input id="addItem" type="button" name="addItem" value="Add Item" />
+        <input id="removeItem" type="button" name="removeItem" value="Remove Selected Items" />
+        <input id="showItem" type="button" name="showItem" value="Show Hidden Items" />
+        <input id="hideItem" type="button" name="hideItem" value="Hide Selected Items" />
+    </form>
+    <script src="TODOList.js"></script>
+</body>
+</html>

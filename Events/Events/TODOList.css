@@ -1,0 +1,27 @@
+﻿html, body, div, form, input {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    color: #fff;
+}
+
+.selected {
+    background-color: rgba(200,0,0,0.5);
+    border: 1px solid #000;
+}
+
+.deselected {
+    background-color: rgba(0,0,200,0.5);
+}
+
+li {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+    li:hover {
+        background-color: rgba(200,0,0,0.5);
+    }

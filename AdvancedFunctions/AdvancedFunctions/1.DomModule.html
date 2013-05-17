@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="wrapper"></div>
+    <script src="1.DomModule.js"></script>
+    <script>
+        domModule.appendChild((function () {
+            var button = document.createElement("button");
+            button.innerHTML = "Click me!";
+
+            return button;
+        }()), "#wrapper");
+        domModule.attachEventHandler("button", "click", function () {
+            alert("ME MUCHO PRO!!!");
+        });
+
+        //Buffer test
+        for (var i = 0; i < 100; i += 1) {
+            domModule.addElementTroughBuffer("body", (function () {
+                var div = document.createElement("div");
+                div.innerHTML = i;
+                return div;
+            }()));
+        }
+    </script>
+</body>
+</html>
